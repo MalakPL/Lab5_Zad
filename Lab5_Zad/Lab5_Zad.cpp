@@ -79,6 +79,8 @@ auto Zadanie2() -> void
 		if (cin.fail()) { throw exception{ IntCastExceptionMessage }; }
 	}
 
+	wcout << endl;
+
 	int HalfN = N / 2;
 	for (int i = 0; i < HalfN; ++i)
 	{
@@ -89,7 +91,7 @@ auto Zadanie2() -> void
 
 	for (int i = 0; i < N; ++i)
 	{
-		wcout << setw(5) << Tablica[i];
+		wcout << Tablica[i] << '\t';
 	}
 
 	if (Tablica != nullptr)
