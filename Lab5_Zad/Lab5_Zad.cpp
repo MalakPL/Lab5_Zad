@@ -54,7 +54,7 @@ auto Zadanie1() -> void
 		i++;
 	}
 
-	wcout << L"Największy element tablicy to: " << max << " index jest równy " << index << endl << endl;
+	wcout << L"Największy element wektora to: " << max << " o indeksie równym " << index << endl << endl;
 }
 
 auto Zadanie2() -> void
