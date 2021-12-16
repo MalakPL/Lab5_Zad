@@ -79,18 +79,32 @@ auto Zadanie2() -> void
 		if (cin.fail()) { throw exception{ IntCastExceptionMessage }; }
 	}
 
-	wcout << endl;
-
-	int HalfN = N / 2;
-	for (int i = 0; i < HalfN; ++i)
-	{
-		int Tmp = Tablica[i];
-		Tablica[i] = Tablica[i + HalfN];
-		Tablica[i + HalfN] = Tmp;
-	}
 
 	for (int i = 0; i < N; ++i)
 	{
+		if (i % 2 == 0)
+		{
+			wcout << endl;
+		}
+		wcout << Tablica[i] << '\t';
+	}
+
+	int HalfN = N / 2;
+	for (int i = 0; i < HalfN; i += 2)
+	{
+		int Tmp = Tablica[2 * i + 0];
+		Tablica[2 * i + 0] = Tablica[2 * i + 1];
+		Tablica[2 * i + 1] = Tmp;
+	}
+
+	wcout << endl;
+
+	for (int i = 0; i < N; ++i)
+	{
+		if (i % 2 == 0)
+		{
+			wcout << endl;
+		}
 		wcout << Tablica[i] << '\t';
 	}
 
